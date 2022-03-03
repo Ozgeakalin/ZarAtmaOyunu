@@ -20,7 +20,7 @@ namespace ZarAtmaOyunu
             InitializeComponent();
            _rnd= _rnd == null ? new Random() : _rnd;
             _business = new Business();
-        }
+            }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace ZarAtmaOyunu
             {
                 btnRestart_Click(new object(), new EventArgs());
 
-            }
+        }
         }
         private void btnSecondPlayer_Click(object sender, EventArgs e)
         {
@@ -84,6 +84,7 @@ namespace ZarAtmaOyunu
             {
                 if (_business.IsNumeric(txtScore.Text))
                 {
+                    _finishScore = Convert.ToInt32(txtScore.Text);
                     btnFirstPlayer.Enabled = true;
                     btnSecondPlayer.Enabled = false;
                 }
@@ -93,10 +94,10 @@ namespace ZarAtmaOyunu
                     MessageBox.Show("Sadece sayı girişi yapınız;");
                 }
 
-            }
-
-
         }
+
+
+            }
 
         private void btnRestart_Click(object sender, EventArgs e)
         {
